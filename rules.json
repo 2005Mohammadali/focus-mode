@@ -6,7 +6,7 @@
         "redirect": { "url": "https://www.youtube.com/" }
     },
     "condition": {
-        "urlFilter": "*://*.youtube.com/shorts/*",
-        "resourceTypes" : ["main_frame"]
+        "urlFilter": "*://*.youtube.com/shorts*",
+        "resourceTypes" : ["main_frame", "sub_frame", "xmlhttprequest", "other"]
     }
 }]

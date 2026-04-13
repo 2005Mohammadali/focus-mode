@@ -10,13 +10,12 @@
     "128": "images/icon-128.png"
   },
   "background": {
-    "service-worker": "background.js"
+    "service_worker": "background.js"
   },
-  "permissions": [
-    "activeTab",
-    "scripting",
+    "permissions": [
     "storage",
-    "declarativeNetRequest"
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess"
   ],
   "action": {
     "default_icon": {
@@ -45,7 +44,7 @@
     "rule_resources": [
       {
         "id": "ruleset_1",
-        "enabled": true,
+        "enabled": false,
         "path": "rules.json"
       }
     ]

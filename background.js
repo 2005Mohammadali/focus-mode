@@ -1,7 +1,18 @@
-chrome.runtime.onInstalled.addListener(() => {
-    chrome.storage.local.set({
+chrome.runtime.onInstalled.addListener(async () => {
+    await chrome.storage.local.set({
         state: "on"
-    })
+    });
+    await chrome.declarativeNetRequest.updateEnabledRulesets({ enableRulesetIds: ["ruleset_1"] });
+})
+
+chrome.storage.onChanged.addListener(async (changes) => {
+    if (changes.state) {
+        if (changes.state.newValue === "on") {
+            await chrome.declarativeNetRequest.updateEnabledRulesets({ enableRulesetIds: ["ruleset_1"] });
+        }else{
+            await chrome.declarativeNetRequest.updateEnabledRulesets({ disableRulesetIds: ["ruleset_1"] });
+        }
+    }
 })
 
 
