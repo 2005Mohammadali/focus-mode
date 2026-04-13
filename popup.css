@@ -1,0 +1,43 @@
+html{
+    height: fit-content;
+    width: 300px;
+}
+
+body{
+    background-color: aliceblue;
+}
+
+.shorts{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.pill {
+  border-radius: 20px;
+  padding: 10px 20px;
+  background-color: #676666;
+  opacity: 0.8;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+.pill.active {
+  background-color: #03b44c;
+}
+
+.slide{
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 20px;
+    top: 2px;
+    bottom: 2px;
+    left: 2px;
+    right: 22px;
+    transition: transform 0.4s;
+}
+
+.slide.active{
+    transform: translateX(20px);
+}

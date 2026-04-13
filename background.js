@@ -1,3 +1,10 @@
+chrome.runtime.onInstalled.addListener(() => {
+    chrome.storage.local.set({
+        state: "on"
+    })
+})
+
+
 // chrome.runtime.onInstalled.addListener(() => {
 //   chrome.action.setBadgeText({
 //     text: "OFF",
